@@ -130,8 +130,8 @@ tbl.appendChild(tr);
     axios.put(`https://crudcrud.com/api/6fca7c9853ba4cf5a97c7217c1b2528c/appoint/${idedit}`,obj)
     .then((res)=>{
       console.log(res.data);
-      idedit=undefined;
-    }).catch((error)=>{console.log(error)});
+   
+    }).catch((error)=>{console.log(alert(error))});
   //  Add route 
 
 
@@ -165,6 +165,7 @@ phone1.appendChild(document.createTextNode(phone));
 btn.appendChild(document.createTextNode("Remove"));
 edit.appendChild(document.createTextNode("Edit"));
 tbl.appendChild(tr);
+idedit=undefined;
 
   }
 
