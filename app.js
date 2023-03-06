@@ -129,8 +129,7 @@ tbl.appendChild(tr);
 
     axios.put(`https://crudcrud.com/api/6fca7c9853ba4cf5a97c7217c1b2528c/appoint/${idedit}`,obj)
     .then((res)=>{
-      console.log(res.data);
-   
+
     }).catch((error)=>{console.log(alert(error))});
   //  Add route 
 
@@ -139,32 +138,10 @@ tbl.appendChild(tr);
 
 
 localStorage.setItem(`${email}`,JSON.stringify(obj));
-//creating a component to add in Table
 
-var tbl=document.getElementById('items');
-var nid=document.createElement("td");
-var tr=document.createElement("tr");
-var name1=document.createElement("td");
-var email1=document.createElement("td");
-var phone1=document.createElement("td");
-var btn=document.createElement("button");
-var edit=document.createElement("button");
-btn.classList="delete";
-edit.classList="edit";
-tr.appendChild(nid);
-tr.appendChild(name1);
-tr.appendChild(name1);
-tr.appendChild(email1);
-tr.appendChild(phone1);
-tr.appendChild(document.createElement("td").appendChild(btn));
-tr.appendChild(document.createElement("td").appendChild(edit));
-nid.appendChild(document.createTextNode(idedit));
-name1.appendChild(document.createTextNode(name));
-email1.appendChild(document.createTextNode(email));
-phone1.appendChild(document.createTextNode(phone));
-btn.appendChild(document.createTextNode("Remove"));
-edit.appendChild(document.createTextNode("Edit"));
-tbl.appendChild(tr);
+alert("Edited Successfully!!");
+location.reload();
+
 idedit=undefined;
 
   }
